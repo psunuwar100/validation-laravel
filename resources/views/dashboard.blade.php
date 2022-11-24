@@ -2,5 +2,7 @@
 
     @section('content')
         <h2 class="text-center">dashboard</h2>
-
+        <form action="{{route('logout')}}" method="get">
+            <button type="submit" class="btn btn-secondary">Log out</button>
+        </form>
     @endsection 
