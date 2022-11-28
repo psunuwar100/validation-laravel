@@ -6,12 +6,13 @@ use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Outdoor;
 
 class UserController extends Controller
 {
     public function index()
     {
-        return view("dashboard");
+        return view("dashboard", ['items' => outdoor::all()]);
     }
     public function handleLogin()
     {
